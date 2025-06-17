@@ -1,4 +1,5 @@
 import java.math.BigInteger;
+import java.util.Scanner;
 
 public class Basic {
     public static void main(String[] args) {
@@ -56,6 +57,34 @@ public class Basic {
         System.out.println("Totient Value of " + x + " = " + tot);
         return tot;
     }
+
+    public static void euclidean() {
+        BigInteger a, b;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a: ");
+        String Str_a = input.nextLine();
+        a = new BigInteger(Str_a);
+    
+        System.out.print("Enter b: ");
+        String Str_b = input.nextLine();
+        b = new BigInteger(Str_b);
+    
+        while (b.compareTo(BigInteger.ZERO) != 0) {
+            System.out.println("gcd(a = " + a + ", b = " + b + ")");
+                BigInteger x = a.mod(b);
+
+                a = b;
+                b = x;
+
+        }
+
+            System.out.println("gcd(a = " + a + ", b = " + b + ")");
+
+            System.out.println("Answer = " + a);
+        }
+    }   
+
         
         
 }
