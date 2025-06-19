@@ -38,8 +38,8 @@ Implementation of RSA asymmetric encryption algorithm.
 Advanced RSA implementation combining digital signatures and encryption.
 - Generates separate key pairs for Alice and Bob
 - Demonstrates the concept of signing with private key and encrypting with public key
+- Creates a signed message digest with SHA256 for verification
 - Shows a hybrid approach for secure communication
-- **Note**: This file appears to be incomplete (missing decryption key parameter)
 
 ### Utility Classes
 
