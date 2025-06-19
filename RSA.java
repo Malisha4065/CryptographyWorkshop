@@ -21,12 +21,16 @@ public class RSA {
         PrivateKey pvt_key = key_pair.getPrivate();
         PublicKey pub_key = key_pair.getPublic();
 
-        System.out.println("Private Key: " + new String(pvt_key.getEncoded()));
-        System.out.println("Public Key: " + new String(pub_key.getEncoded()));
+        System.out.println();
+        System.out.println("Private Key: " + Base64.getEncoder().encodeToString(pvt_key.getEncoded()));
+        System.out.println();
+        System.out.println("Public Key: " + Base64.getEncoder().encodeToString(pub_key.getEncoded()));
+        System.out.println();
 
 
         String message = "Sample secret message";
         System.out.println("Plain Text: " + message);
+        System.out.println();
 
         Cipher cipher = Cipher.getInstance("RSA");
         cipher.init(Cipher.ENCRYPT_MODE, pub_key);
@@ -34,10 +38,10 @@ public class RSA {
         byte[] byte_msg = message.getBytes(StandardCharsets.UTF_8);
         byte[] cipher_text = cipher.doFinal(byte_msg);
 
-        System.out.println("Cipher Text: " + new String(cipher_text));
         String encoded_msg = Base64.getEncoder().encodeToString(cipher_text);
 
         System.out.println("Cipher Text: " + encoded_msg);
+        System.out.println();
 
         // Transmit
         // Receiver side
