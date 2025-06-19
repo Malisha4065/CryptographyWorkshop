@@ -41,6 +41,19 @@ Advanced RSA implementation combining digital signatures and encryption.
 - Creates a signed message digest with SHA256 for verification
 - Shows a hybrid approach for secure communication
 
+#### [`RSAwithSignature.java`](RSAwithSignature.java)
+Complete implementation of RSA encryption with digital signatures for secure communication.
+- **Dual Key Pairs**: Generates separate RSA key pairs for Alice (sender) and Bob (receiver)
+- **Message Signing**: Alice signs the message using her private key with SHA256withRSA
+- **Message Encryption**: Alice encrypts the message using Bob's public key
+- **Message Decryption**: Bob decrypts the message using his private key
+- **Signature Verification**: Bob verifies the signature using Alice's public key
+- **Complete Workflow**: Demonstrates end-to-end secure communication with both confidentiality and authenticity
+- **Security Features**:
+  - Ensures message confidentiality (only Bob can decrypt)
+  - Ensures message authenticity (proves message came from Alice)
+  - Prevents tampering (signature verification fails if message is modified)
+
 ### Utility Classes
 
 #### [`Basic.java`](Basic.java)
