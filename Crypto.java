@@ -51,5 +51,10 @@ public class Crypto {
         des.init(Cipher.DECRYPT_MODE, sec_key, iv);
         byte[] dec_text = des.doFinal(enc_text);
         System.out.println("Decrypted Text = " + new String(dec_text));
+
+
+        // ===============================
+        // AES
+        
     }
 }
