@@ -12,7 +12,7 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 
-public class Crypto {
+public class DES {
     public static void main(String[] args) throws InvalidKeyException, InvalidKeySpecException, NoSuchAlgorithmException, javax.crypto.IllegalBlockSizeException, javax.crypto.BadPaddingException, NoSuchPaddingException, InvalidAlgorithmParameterException {
         String key = "12345678";
         DESKeySpec key_spec = new DESKeySpec(key.getBytes());
